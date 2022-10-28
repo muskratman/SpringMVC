@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Show Person</title>
+</head>
+<body>
+
+<div>
+    <table>
+        <tr>
+            <th>id</th>
+            <td><a th:text="${person.getId()}">ID</a></td>
+        </tr>
+        <tr>
+            <th>Name</th>
+            <td><a th:text="${person.getName()}">NAME</a></td>
+        </tr>
+        <tr>
+            <th>Surname</th>
+            <td><a th:text="${person.getSurname()}">SURNAME</a></td>
+        </tr>
+        <tr>
+            <th>Age</th>
+            <td><a th:text="${person.getAge()}">SURNAME</a></td>
+        </tr>
+        <tr>
+            <th>Email</th>
+            <td><a th:text="${person.getEmail()}">EMAIL</a></td>
+        </tr>
+    </table>
+</div>
+
+<br>
+<button>
+    <a th:href="@{'/people/' + ${person.getId()} + '/edit'}" class="button">Edit Person</a>
+</button>
+
+<form th:method="DELETE" th:action="@{/people/{id}(id=${person.getId()})}">
+    <input type="submit" value="Delete Person">
+</form>
+
+<br>
+<hr>
+<input type="button" value="All People" onclick="location.href='/people';"/>
+
+<br>
+<br>
+
+
+
+</body>
+</html>
