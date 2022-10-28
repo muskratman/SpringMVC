@@ -46,6 +46,11 @@
       <artifactId>spring-webmvc</artifactId>
       <version>${spring.version}</version>
     </dependency>
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-jdbc</artifactId>
+      <version>${spring.version}</version>
+    </dependency>
 
     <!-- thymeleaf -->
     <dependency>
@@ -54,7 +59,7 @@
       <version>3.0.15.RELEASE</version>
     </dependency>
 
-    <!-- javax servlet -->
+    <!-- j servlet -->
     <dependency>
       <groupId>javax.servlet</groupId>
       <artifactId>javax.servlet-api</artifactId>
@@ -62,7 +67,22 @@
       <scope>provided</scope>
     </dependency>
 
+    <!-- hibernate -->
+    <dependency>
+      <groupId>org.hibernate.validator</groupId>
+      <artifactId>hibernate-validator</artifactId>
+      <version>7.0.5.Final</version>
+    </dependency>
+
+    <!-- postgresql -->
+    <dependency>
+      <groupId>org.postgresql</groupId>
+      <artifactId>postgresql</artifactId>
+      <version>42.5.0</version>
+    </dependency>
+
   </dependencies>
+
 
   <build>
     <finalName>SpringMVC</finalName>

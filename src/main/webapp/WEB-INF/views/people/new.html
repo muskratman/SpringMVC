@@ -1,33 +1,33 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
-  <meta charset="UTF-8">
-  <title>Create Person</title>
+    <meta charset="UTF-8">
+    <title>Create Person</title>
 </head>
 <body>
 
 <form th:method="POST" th:action="@{/people}" th:object="${person}">
-  <div>
-    <table>
-      <tr>
-        <th>Name</th>
-        <td><input type="text" th:field="*{name}"></td>
-      </tr>
-      <tr>
-        <th>Surname</th>
-        <td><input type="text" th:field="*{surname}"></td>
-      </tr>
-      <tr>
-        <th>Age</th>
-        <td><input type="text" th:field="*{age}"></td>
-      </tr>
-      <tr>
-        <th>Email</th>
-        <td><input type="text" th:field="*{email}"></td>
-      </tr>
-    </table>
-    <input type="submit" value="Add Person">
-  </div>
+    <div>
+        <table>
+            <tr>
+                <th>Name</th>
+                <td><input type="text" th:field="*{name}"></td>
+            </tr>
+            <tr>
+                <th>Surname</th>
+                <td><input type="text" th:field="*{surname}"></td>
+            </tr>
+            <tr>
+                <th>Age</th>
+                <td><input type="text" th:field="*{age}"></td>
+            </tr>
+            <tr>
+                <th>Email</th>
+                <td><input type="text" th:field="*{email}"></td>
+            </tr>
+        </table>
+        <input type="submit" value="Add Person">
+    </div>
 </form>
 <br>
 <hr>
