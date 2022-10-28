@@ -1,4 +1,4 @@
-package com.cookiebros.springmvc.models;
+package com.cookiebros.spring.models;
 
 
 public class Person {

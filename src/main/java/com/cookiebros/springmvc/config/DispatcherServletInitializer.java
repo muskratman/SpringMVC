@@ -1,12 +1,9 @@
 package com.cookiebros.springmvc.config;
 
-
 import org.springframework.web.filter.HiddenHttpMethodFilter;
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
-
 import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
-
 
 public class DispatcherServletInitializer extends AbstractAnnotationConfigDispatcherServletInitializer {
     @Override
@@ -16,7 +13,7 @@ public class DispatcherServletInitializer extends AbstractAnnotationConfigDispat
 
     @Override
     protected Class<?>[] getServletConfigClasses() {
-        return new Class[] {com.cookiebros.springmvc.config.SpringConfig.class};
+        return new Class[] {SpringConfig.class};
     }
 
     @Override

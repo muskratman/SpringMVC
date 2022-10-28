@@ -1,11 +1,12 @@
 package com.cookiebros.springmvc.controllers;
 
 import com.cookiebros.springmvc.dao.PersonDAO;
-import com.cookiebros.springmvc.models.Person;
+import com.cookiebros.spring.models.Person;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
+import java.lang.annotation.Target;
 
 @Controller
 @RequestMapping("/people")
