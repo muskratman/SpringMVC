@@ -83,7 +83,7 @@ public class PersonDAO {
     public void save(Person savedPerson) {
         try {
             PreparedStatement preparedStatement = connection.prepareStatement(
-                    "INSERT INTO Person(name, surmane, age, email) VALUES(?, ?, ?, ?)");
+                    "INSERT INTO Person(name, surname, age, email) VALUES(?, ?, ?, ?)");
             preparedStatement.setString(1, savedPerson.getName());
             preparedStatement.setString(2, savedPerson.getSurname());
             preparedStatement.setInt(3, savedPerson.getAge());
@@ -93,7 +93,6 @@ public class PersonDAO {
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
-
     }
 
     public void update(int id, Person updatedPerson) {
