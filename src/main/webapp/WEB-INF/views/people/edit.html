@@ -12,18 +12,22 @@
             <tr>
                 <th>Name</th>
                 <td><input type="text" th:field="*{name}"></td>
+                <td style="color:red" th:if="${#fields.hasErrors('name')}" th:errors="*{name}">Name ERROR</td>
             </tr>
             <tr>
                 <th>Surname</th>
                 <td><input type="text" th:field="*{surname}"></td>
+                <td style="color:red" th:if="${#fields.hasErrors('surname')}" th:errors="*{surname}">Surname ERROR</td>
             </tr>
             <tr>
                 <th>Age</th>
                 <td><input type="text" th:field="*{age}"></td>
+                <td style="color:red" th:if="${#fields.hasErrors('age')}" th:errors="*{age}">Age ERROR</td>
             </tr>
             <tr>
                 <th>Email</th>
                 <td><input type="text" th:field="*{email}"></td>
+                <td style="color:red" th:if="${#fields.hasErrors('email')}" th:errors="*{email}">Email ERROR</td>
             </tr>
         </table>
         <input type="submit" value="Update Person">

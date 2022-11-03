@@ -1,12 +1,16 @@
 package com.cookiebros.springmvc.models;
 
 
+import jakarta.validation.constraints.Email;
+import jakarta.validation.constraints.Min;
+import jakarta.validation.constraints.NotEmpty;
+import jakarta.validation.constraints.Size;
+
 public class Person {
     private int id;
     private String name;
     private String surname;
     private byte age;
-
     private String email;
 
     public Person(){
