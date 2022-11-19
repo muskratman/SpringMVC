@@ -1,6 +1,8 @@
 package com.cookiebros.springmvc.models;
 
-import jakarta.persistence.*;
+//import jakarta.persistence.*;
+
+import javax.persistence.*;
 
 
 @Entity
