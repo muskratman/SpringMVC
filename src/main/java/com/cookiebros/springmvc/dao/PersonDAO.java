@@ -23,17 +23,21 @@ public class PersonDAO {
     @Transactional(readOnly = true)
     public List<Person> index() {
         Session session = sessionFactory.getCurrentSession();
+
         return session.createQuery("SELECT p FROM Person p", Person.class).getResultList();
     }
 
+    @Transactional(readOnly = true)
     public Person show(int id) {
-        return null;
+        Session session = sessionFactory.getCurrentSession();
+
+        return  session.get(Person.class, id);
     }
 
     //Валидация email, запрос к БД, существует ли Person с таким email
     public Optional<Person> show(String email) {
-
-        return null;
+        Session session = sessionFactory.getCurrentSession();
+        return session.createQuery("FROM Person WHERE email = ?", Person.class).;
     }
 
     public void save(Person savedPerson) {
