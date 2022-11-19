@@ -1,24 +1,30 @@
-package com.cookiebros.spring.models;
+package com.cookiebros.springmvc.models;
+
+import jakarta.persistence.*;
 
 
-import jakarta.validation.constraints.Email;
-import jakarta.validation.constraints.Min;
-import jakarta.validation.constraints.NotEmpty;
-import jakarta.validation.constraints.Size;
-
+@Entity
+@Table(name = "Person")
 public class Person {
+
+    @Id
+    @Column(name = "id")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
+    @Column(name = "name")
     private String name;
+    @Column(name = "surname")
     private String surname;
+    @Column(name = "age")
     private byte age;
+    @Column(name = "email")
     private String email;
 
     public Person(){
 
     }
 
-    public Person(int id, String name, String surname, byte age, String email) {
-        this.id = id;
+    public Person(String name, String surname, byte age, String email) {
         this.name = name;
         this.surname = surname;
         this.age = age;
