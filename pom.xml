@@ -71,6 +71,12 @@
       <artifactId>spring-orm</artifactId>
       <version>${spring.version}</version>
     </dependency>
+    <dependency>
+      <groupId>org.springframework.data</groupId>
+      <artifactId>spring-data-jpa</artifactId>
+      <version>2.7.6</version>
+    </dependency>
+
 
     <!-- j servlet -->
     <dependency>
@@ -86,12 +92,6 @@
       <artifactId>hibernate-core</artifactId>
       <version>5.6.14.Final</version>
     </dependency>
-    <!--    <dependency>-->
-    <!--      <groupId>org.hibernate.orm</groupId>-->
-    <!--      <artifactId>hibernate-core</artifactId>-->
-    <!--      <version>6.0.2.Final</version>-->
-    <!--    </dependency>-->
-
 <!--    <dependency>-->
 <!--      <groupId>org.hibernate.validator</groupId>-->
 <!--      <artifactId>hibernate-validator</artifactId>-->
