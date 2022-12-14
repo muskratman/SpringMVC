@@ -58,10 +58,9 @@ public class PersonValidator implements Validator {
             errors.rejectValue("email", "", "Email should be valid");
 
         //проверка на уникальность email в БД
-        int updatedPersonId = person.getId();
         Person foundPerson = peopleService.findByEmail(person.getEmail()).orElse(null);
 
-        if (foundPerson != null && foundPerson.getId() != updatedPersonId)
+        if (foundPerson != null && foundPerson.getId() != person.getId())
             errors.rejectValue("email", "", "This email is already taken");
     }
 }
